@@ -24,8 +24,8 @@ export default (deduce: DeduceInterface) => (data: Score): void => {
     playerInfo.havePot = data.pot;
     if (
       priorEntrys.length > 0 && deduceConfig.type === '内功'
-        ? entryInfoKeys.length > 2
-        : entryInfoKeys.length > 1
+        ? entryInfoKeys.length >= 2
+        : entryInfoKeys.length >= 1
     ) {
       if (
         entryInfoKeys.some((entryName) => {
